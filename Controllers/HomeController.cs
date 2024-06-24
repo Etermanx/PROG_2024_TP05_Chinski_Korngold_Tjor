@@ -22,4 +22,9 @@ public class HomeController : Controller
     {
         return View();
     }
+
+    public IActionResult Comenzar()
+    {
+        return View("Habitacion" + (Escape.GetEstadoJuego() + 1));
+    }
 }

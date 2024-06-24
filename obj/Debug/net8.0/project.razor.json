@@ -19329,6 +19329,16 @@
   "RootNamespace": "PROG_2024_TP05_Tjor",
   "Documents": [
     {
+      "FilePath": "c:\\Users\\48675877\\Downloads\\PROG_2024_TP05_Tjor\\Views\\Home\\Habitacion5.cshtml",
+      "TargetPath": "Views\\Home\\Habitacion5.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\48675877\\Downloads\\PROG_2024_TP05_Tjor\\Views\\Home\\Creditos.cshtml",
+      "TargetPath": "Views\\Home\\Creditos.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\48675877\\Downloads\\PROG_2024_TP05_Tjor\\Views\\Home\\Tutorial.cshtml",
       "TargetPath": "Views\\Home\\Tutorial.cshtml",
       "FileKind": "mvc"
@@ -19346,6 +19356,26 @@
     {
       "FilePath": "c:\\Users\\48675877\\Downloads\\PROG_2024_TP05_Tjor\\Views\\_ViewImports.cshtml",
       "TargetPath": "Views\\_ViewImports.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\48675877\\Downloads\\PROG_2024_TP05_Tjor\\Views\\Home\\Habitacion3.cshtml",
+      "TargetPath": "Views\\Home\\Habitacion3.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\48675877\\Downloads\\PROG_2024_TP05_Tjor\\Views\\Home\\Habitacion2.cshtml",
+      "TargetPath": "Views\\Home\\Habitacion2.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\48675877\\Downloads\\PROG_2024_TP05_Tjor\\Views\\Home\\Habitacion1.cshtml",
+      "TargetPath": "Views\\Home\\Habitacion1.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\48675877\\Downloads\\PROG_2024_TP05_Tjor\\Views\\Home\\Habitacion4.cshtml",
+      "TargetPath": "Views\\Home\\Habitacion4.cshtml",
       "FileKind": "mvc"
     },
     {
