@@ -17,14 +17,27 @@ public class HomeController : Controller
     {
         return View();
     }
-
     public IActionResult Tutorial()
     {
         return View();
     }
-
     public IActionResult Comenzar()
     {
-        return View("Habitacion" + (Escape.GetEstadoJuego() + 1));
+        return View("Habitacion1");
+    }
+    public IActionResult Habitacion(int sala, string clave)
+    {
+        int estadoJuego = Escape.GetEstadoJuego();
+        if (sala == estadoJuego && Escape.ResolverSala(sala, clave)){
+            if (estadoJuego == 5)
+                return View("Victoria");
+            else
+                return View("Habitacion" + (estadoJuego + 1));
+        }
+        else
+        {
+            ViewBag.Error = "Respuesta incorrecta";
+            return View("Habitacion" + estadoJuego);
+        }
     }
 }

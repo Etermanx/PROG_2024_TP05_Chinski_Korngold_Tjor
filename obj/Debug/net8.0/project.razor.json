@@ -19349,6 +19349,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "c:\\Users\\48675877\\Downloads\\PROG_2024_TP05_Tjor\\Views\\Home\\Victoria.cshtml",
+      "TargetPath": "Views\\Home\\Victoria.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\48675877\\Downloads\\PROG_2024_TP05_Tjor\\Views\\Shared\\_Layout.cshtml",
       "TargetPath": "Views\\Shared\\_Layout.cshtml",
       "FileKind": "mvc"
