@@ -19329,6 +19329,11 @@
   "RootNamespace": "PROG_2024_TP05_Tjor",
   "Documents": [
     {
+      "FilePath": "c:\\Users\\48675877\\Downloads\\PROG_2024_TP05_Tjor\\Views\\Home\\Tutorial.cshtml",
+      "TargetPath": "Views\\Home\\Tutorial.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "c:\\Users\\48675877\\Downloads\\PROG_2024_TP05_Tjor\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
       "TargetPath": "Views\\Shared\\_ValidationScriptsPartial.cshtml",
       "FileKind": "mvc"
