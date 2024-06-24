@@ -2,7 +2,7 @@ static class Escape {
     private static string[] incognitasSalas = {
         "brújula",
         "misterio"
-        
+
     };
     private static int estadoJuego = 1;
 
@@ -11,6 +11,9 @@ static class Escape {
         return estadoJuego;
     }
     public static bool ResolverSala(int Sala, string Incognita){
-        return incognitasSalas[Sala-1] == Incognita;
+        bool resuelto = incognitasSalas[Sala-1] == Incognita;
+        if (resuelto)
+            estadoJuego++;
+        return resuelto;
     }
 }
