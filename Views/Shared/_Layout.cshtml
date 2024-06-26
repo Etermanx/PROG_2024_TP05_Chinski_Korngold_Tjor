@@ -10,7 +10,13 @@
 
 <body>
     <header>
-        NombreProyecto
+        <img src="~/img/logo.jpeg">
+        <nav>
+            <ul>
+                <li><a href='@Url.Action("Tutorial")'>Tutorial</a></li>
+                <li><a href='@Url.Action("Comenzar")'>Comenzar</a></li>
+            </ul>
+        </nav>
     </header>
 
     <main role="main">
@@ -18,7 +24,7 @@
     </main>
 
     <footer>
-        &copy; @DateTime.Now.Year - NombreProyecto
+        &copy; @DateTime.Now.Year David Chinski, Tomás Korngold y Lucas Tjor
     </footer>
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>

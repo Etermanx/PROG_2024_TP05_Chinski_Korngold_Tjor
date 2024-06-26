@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("PROG_2024_TP05_Tjor")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1d62cc61d9e58a7693e28ece1791934ef9caa14f")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+add438f9d6f7f2c6a0a8f25f3b88c7164dadac30")]
 [assembly: System.Reflection.AssemblyProductAttribute("PROG_2024_TP05_Tjor")]
 [assembly: System.Reflection.AssemblyTitleAttribute("PROG_2024_TP05_Tjor")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
