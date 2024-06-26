@@ -1,0 +1,18 @@
+@{
+    ViewData["Title"] = "VICTORIA";
+}
+
+<div>
+    <h1>Bienvenido a bordo</h1>
+    <p>"Bienvenido a bordo, tripulante. Has sido capturado por la temible Capitana Morgana y su tripulación de despiadados piratas. Te han encerrado en la oscura y húmeda bodega del 'Kraken Negro', el navío insignia de estos temibles bucaneros.</p>
+    <p>Miras a tu alrededor y ves barriles, cajas y sacos apilados por todas partes. El aire huele a madera vieja, pólvora y ron. Tienes solo 60 minutos para escapar de este lúgubre calabozo antes de que los piratas decidan deshacerse de ti.</p>
+    <p>Deberás usar toda tu astucia y habilidad para resolver acertijos, descifrar mapas ocultos, encontrar tesoros escondidos y burlar las trampas que han dispuesto para ti. Sólo así podrás recuperar la libertad y escapar de las garras de estos temibles piratas.</p>
+    
+    <img src="~/img/H1-Bodega_Amanecer.jpg" alt="Bodega">
+
+    <form action='@Url.Action("Habitacion")'>
+        <input type="number" name="sala" value="1" required>
+        <input type="text" name="clave" placeholder="Clave" required>
+        <input type="submit" value="🔒">
+    </form>
+</div>
