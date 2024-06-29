@@ -1,25 +1,77 @@
-html {
-  font-size: 14px;
-  min-height: 100%;
+@font-face {
+  font-family: "Beth Ellen";
+  src: url("/fonts/Beth_Ellen/BethEllen-Regular.ttf");
+}
+@font-face {
+  font-family: "Cormorant Upright";
+  src: url("/fonts/Cormorant_Upright/CormorantUpright-Regular.ttf");
+}
+@font-face {
+  font-family: "Indie Flower";
+  src: url("/fonts/Indie_Flower/IndieFlower-Regular.ttf");
+}
+@font-face {
+  font-family: "Pridi";
+  src: url("/fonts/Pridi/Pridi-Regular.ttf");
 }
 
-@media (min-width: 768px) {
-  html {
-    font-size: 16px;
-  }
-}
+
 
 body {
-  margin: 0;
-  padding: 0;
+  font-family: "Pridi", serif;
+  background-color: #43200a;
+  color: #c8c8c6;
+  margin: 0%;
 }
-
 header {
   display: flex;
 }
 header img {
   width: 10%;
   height: 10%;
+}
+
+div { padding: 0 15%; }
+div div { padding: 0%; }
+p {
+  margin: 6px 0;
+}
+
+.centrado {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  font-family: "Beth Ellen", cursive;
+}
+img {
+  width: 100%;
+}
+input[type=number] {
+  display: none;
+}
+input[type=text] {
+  font-family: "Indie Flower", cursive;
+  font-size: 30px;
+  background-color: transparent;
+  color: #c8c8c6;
+  border: none;
+  outline: none;
+}
+input[type=submit] {
+  background-color: #c8c8c6;
+  border: solid 1px #9c9b9b;
+  width: 30px;
+  height: 30px;
+}
+input[type=submit].rebotado {
+  background-color: red;
+  transition: 0.3s;
+}
+input[type=submit].rebotado:hover {
+  background-color: #c8c8c6;
 }
 
 ul {
@@ -31,4 +83,12 @@ li {
   padding: 3px;
   border: solid 1px white;
   border-radius: 2px;
+}
+
+footer {
+  background-color: #361d09;
+  padding: 5px;
+}
+footer p {
+  margin: 6px 0;
 }
