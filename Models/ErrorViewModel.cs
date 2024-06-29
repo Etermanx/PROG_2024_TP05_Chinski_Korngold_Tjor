@@ -1,4 +1,4 @@
-namespace PROG_2024_TP05_Tjor.Models;
+namespace PROG_2024_TP05_Chinski_Korngold_Tjor.Models;
 
 public class ErrorViewModel
 {

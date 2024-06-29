@@ -1,8 +1,8 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
-using PROG_2024_TP05_Tjor.Models;
+using PROG_2024_TP05_Chinski_Korngold_Tjor.Models;
 
-namespace PROG_2024_TP05_Tjor.Controllers;
+namespace PROG_2024_TP05_Chinski_Korngold_Tjor.Controllers;
 
 public class HomeController : Controller
 {
