@@ -1,0 +1,31 @@
+@{
+    ViewData["Title"] = "Cubierta";
+}
+
+<div class="centrado">
+    <h1>Cubierta</h1>
+    <p>En el centro de la habitación, encontrarás una mesa cubierta con cartas de piratas dispuestas en un patrón intrigante. Cada carta tiene un símbolo único que te transporta al mundo pirata, desde calaveras y cofres del tesoro hasta brújulas y mapas del tesoro.</p>
+
+    <audio autoplay loop>
+        <source src="~/audio/loros.mp3" type="audio/mpeg">
+    </audio>
+
+    <div style="position: relative; width: 100%; height: 100%;">
+        <img src="~/img/Camarote.jpg" alt="Camarote">
+        <a href="~/img/pergamino.png"><img src="~/img/pergamino.png" alt="Pergamino" style="position: absolute; top: 50%; transform: translate(-50%, -50%); width: 80px;"></a>
+    </div>
+
+    <form action='@Url.Action("Habitacion")'>
+        <p>
+            <input type="number" name="sala" value="2" required>
+            @if (ViewBag.Error != null) {
+                <input type="text" name="clave" placeholder="@ViewBag.Error" required>
+                <input class="rebotado" type="submit" value="🔒">
+            } else {
+                <input type="text" name="clave" placeholder="Clave" required>
+                <input type="submit" value="🔒">
+            }
+        </p>
+        <p>No escribir tildes.</p>
+    </form>
+</div>

@@ -4,7 +4,7 @@ static class Escape {
 
     private static void InicializarJuego()
     {
-        incognitasSalas[0] = "brújula";
+        incognitasSalas[0] = "brujula";
         incognitasSalas[1] = "misterio";
     }
     public static int GetEstadoJuego(){
@@ -12,7 +12,7 @@ static class Escape {
     }
     public static bool ResolverSala(int Sala, string Incognita){
         InicializarJuego();
-        bool resuelto = incognitasSalas[Sala-1] == Incognita;
+        bool resuelto = incognitasSalas[Sala-1] == Incognita.ToLower();
         if (resuelto)
             estadoJuego++;
         return resuelto;
