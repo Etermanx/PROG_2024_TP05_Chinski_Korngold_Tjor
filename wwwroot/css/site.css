@@ -27,8 +27,8 @@ header {
   display: flex;
 }
 header img {
-  width: 10%;
-  height: 10%;
+  width: 50%;
+  height: auto;
 }
 
 div { padding: 0 15%; }
@@ -37,6 +37,11 @@ p {
   margin: 6px 0;
 }
 
+.imagenes-descriptivas-slogan{
+
+  width: 70%;
+  height: 60%;
+}
 .centrado {
   display: flex;
   flex-direction: column;
@@ -45,6 +50,14 @@ p {
 
 h1 {
   font-family: "Beth Ellen", cursive;
+}
+a {
+  color: #c8c8c6;
+  text-decoration: none;
+  width: auto;
+}
+a:hover {
+  color: #9c9b9b;
 }
 img {
   width: 100%;
@@ -83,6 +96,12 @@ li {
   padding: 3px;
   border: solid 1px white;
   border-radius: 2px;
+}
+
+#imagen_interactiva {
+  position: relative;
+  width: 100%;
+  height: 100%;
 }
 
 footer {
