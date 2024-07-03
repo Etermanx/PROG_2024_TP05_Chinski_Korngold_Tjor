@@ -25,10 +25,14 @@ body {
 }
 header {
   display: flex;
+  align-items: center;
 }
-header img {
-  width: 50%;
+header a[href="/"] {
+  width: 5%;
   height: auto;
+}
+header a[href="/"], nav li {
+  margin-right: 5px;
 }
 
 div { padding: 0 15%; }
