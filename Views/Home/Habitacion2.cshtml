@@ -15,7 +15,7 @@
 
     <form action='@Url.Action("Habitacion")'>
         <p>
-            <input type="number" name="sala" value="2" required>
+            <input type="hidden" name="sala" value="2">
             @if (ViewBag.Error != null) {
                 <input type="text" name="clave" placeholder="@ViewBag.Error" required>
                 <input class="rebotado" type="submit" value="🔒">

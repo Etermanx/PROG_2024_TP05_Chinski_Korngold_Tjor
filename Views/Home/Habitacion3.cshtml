@@ -2,21 +2,20 @@
     ViewData["Title"] = "Cubierta";
 }
 
+<audio loop autoplay>
+    <source src="~/audio/loros.mp3" type="audio/mpeg" />
+</audio>
+
 <div class="centrado">
     <h1>Cubierta</h1>
-    <p>
-Al abrir la puerta hacia la tercera sala de la sala de escape, me encuentro transportado a la cubierta del barco pirata. El suelo de madera cruje bajo mis pies mientras navego entre barriles vacíos y redes desgastadas que cuelgan del techo. El ambiente está impregnado con el olor a sal marina y a aventura. A lo lejos, la figura de un timón antiguo y oxidado domina el centro de la cubierta, mientras que en las paredes cuelgan mapas descoloridos y dagas ornamentadas.En esta cubierta encontraras desafios y acertijos con el fin de pasar a la siguiente etapa.
-</p>
-<p>Buena suerte!!</p>
+    <p>Al abrir la puerta hacia la tercera sala de la sala de escape, me encuentro transportado a la cubierta del barco pirata. El suelo de madera cruje bajo mis pies mientras navego entre barriles vacíos y redes desgastadas que cuelgan del techo. El ambiente está impregnado con el olor a sal marina y a aventura. A lo lejos, la figura de un timón antiguo y oxidado domina el centro de la cubierta, mientras que en las paredes cuelgan mapas descoloridos y dagas ornamentadas.En esta cubierta encontraras desafios y acertijos con el fin de pasar a la siguiente etapa.</p>
+    <p>Buena suerte!!</p>
 
-
-
-    <!-- Loro -->
-    <!-- [memotest acá] -->
-
+    <div id="memotest"></div>
+    
     <form action='@Url.Action("Habitacion")'>
         <p>
-            <input type="number" name="sala" value="2" required>
+            <input type="hidden" name="sala" value="3">
             @if (ViewBag.Error != null) {
                 <input type="text" name="clave" placeholder="@ViewBag.Error" required>
                 <input class="rebotado" type="submit" value="🔒">
@@ -28,3 +27,4 @@ Al abrir la puerta hacia la tercera sala de la sala de escape, me encuentro tran
         <p>No escribir tildes.</p>
     </form>
 </div>
+

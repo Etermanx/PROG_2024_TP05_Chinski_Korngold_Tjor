@@ -31,6 +31,7 @@ public class HomeController : Controller
     }
     public IActionResult Habitacion(int sala, string clave)
     {
+        
         int estadoJuego = Escape.GetEstadoJuego();
         if (sala == estadoJuego && Escape.ResolverSala(sala, clave)){
             if (estadoJuego == 5)

@@ -12,6 +12,7 @@ static class Escape {
         return estadoJuego;
     }
     public static bool ResolverSala(int Sala, string Incognita){
+        
         InicializarJuego();
         bool resuelto = incognitasSalas[Sala-1] == Incognita.ToLower();
         if (resuelto)

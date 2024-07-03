@@ -34,6 +34,11 @@ header a[href="/"] {
 header a[href="/"], nav li {
   margin-right: 5px;
 }
+nav li {
+  padding: 3px;
+  border: solid 1px white;
+  border-radius: 2px;
+}
 
 div { padding: 0 15%; }
 div div { padding: 0%; }
@@ -42,7 +47,6 @@ p {
 }
 
 .imagenes-descriptivas-slogan{
-
   width: 70%;
   height: 60%;
 }
@@ -50,6 +54,9 @@ p {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.centrado ol li{
+  margin: 1.5%;
 }
 
 h1 {
@@ -66,9 +73,8 @@ a:hover {
 img {
   width: 100%;
 }
-input[type=number] {
-  display: none;
-}
+
+
 input[type=text] {
   font-family: "Indie Flower", cursive;
   font-size: 30px;
@@ -93,20 +99,22 @@ input[type=submit].rebotado:hover {
 
 ul {
   display: flex;
+  flex-direction: row;
   list-style: none;
   padding: 0;
+  width: 100%;
 }
-li {
-  padding: 3px;
-  border: solid 1px white;
-  border-radius: 2px;
+.expandido li {
+  width:33.33%;
 }
+
 
 #imagen_interactiva {
   position: relative;
   width: 100%;
   height: 100%;
 }
+
 
 footer {
   background-color: #361d09;
