@@ -116,6 +116,37 @@ ul {
 }
 
 
+#memotest {
+  width: 100%;
+}
+.carta {
+  width: 19%;
+  height: 100px;
+  font-size: 42px;
+  border: solid 1px #c8c8c6;
+  border-radius: 5px;
+  margin-right: 1%;
+  margin-bottom: 1%;
+}
+.carta:hover {
+  border: solid 1px #9c9b9b;
+  transform: rotateX(-10deg) rotateY(10deg);
+  box-shadow: 2px 3px 3px rgba(0, 0, 0, 0.5);
+}
+.carta:hover[disabled="true"] {
+  transform: rotate(0);
+  box-shadow: none;
+}
+.carta.reverso {
+  color: #c8c8c6;
+  background-color: #361d09; 
+}
+.carta.anverso {
+  color: #361d09;
+  border: solid 1px #9c9b9b;
+}
+
+
 footer {
   background-color: #361d09;
   padding: 5px;
