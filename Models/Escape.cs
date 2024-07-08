@@ -7,6 +7,8 @@ static class Escape {
         incognitasSalas[0] = "brujula";
         incognitasSalas[1] = "misterio";
         incognitasSalas[2] = "cofre";
+        incognitasSalas[3] = "capitan";
+        incognitasSalas[4] = "felicidades";
     }
     public static int GetEstadoJuego(){
         return estadoJuego;

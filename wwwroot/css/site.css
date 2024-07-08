@@ -59,6 +59,17 @@ p {
   margin: 1.5%;
 }
 
+.sotano{
+align-items: stretch;
+
+}
+.form{
+
+  display: flex;
+ 
+  align-items: center;
+}
+
 h1 {
   font-family: "Beth Ellen", cursive;
 }
@@ -107,6 +118,7 @@ ul {
 .expandido li {
   width:33.33%;
 }
+
 
 
 #imagen_interactiva {

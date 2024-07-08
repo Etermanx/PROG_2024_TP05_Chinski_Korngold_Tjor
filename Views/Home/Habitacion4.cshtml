@@ -1,0 +1,33 @@
+@{
+    ViewData["Title"] = "Sotano del tesoro";
+}
+
+<div class="centrado">
+    <h1>Bienvenido/a al sótano</h1>
+    <p>¡Ahoy, valientes aventureros! Han llegado al oscuro y misterioso sótano del galeón pirata. Aquí se esconde el tesoro más grande, protegido por ingeniosos acertijos y trampas. </p>
+    <p> Usen su ingenio y trabajen en equipo para resolver cada desafío y encontrar el código de desbloqueo. Solo los más astutos podrán escapar con el botín. </p>
+    <p> ¡Buena suerte, y que el espíritu de la piratería esté con ustedes! </p>
+
+
+    <img src="~/img/Sotano.jpg" alt="Sotano">
+    <div class ="sotano">
+    <img src="~/img/Tabla de Codigos.jpg" alt="Sotano">
+     
+    
+    
+   
+
+    <form class = "form" action='@Url.Action("Habitacion")'>
+        <p>
+            <input type="hidden" name="sala" value="4">
+            @if (ViewBag.Error != null) {
+                <input type="text" name="clave" placeholder="@ViewBag.Error" required>
+                <input class="rebotado" type="submit" value="🔒">
+            } else {
+                <input type="text" name="clave" placeholder="Clave" required>
+                <input type="submit" value="🔒">
+            }
+        </p>
+        <p>No escribir tildes.</p>
+    </form>
+</div>
