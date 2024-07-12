@@ -5,19 +5,14 @@
 <div class="centrado">
     <h1>Bienvenido/a al sótano</h1>
     <p>¡Ahoy, valientes aventureros! Han llegado al oscuro y misterioso sótano del galeón pirata. Aquí se esconde el tesoro más grande, protegido por ingeniosos acertijos y trampas. </p>
-    <p> Usen su ingenio y trabajen en equipo para resolver cada desafío y encontrar el código de desbloqueo. Solo los más astutos podrán escapar con el botín. </p>
-    <p> ¡Buena suerte, y que el espíritu de la piratería esté con ustedes! </p>
+    <p>Solo los más astutos podrán escapar con el botín.</p>
 
-
-    <img src="~/img/Sotano.jpg" alt="Sotano">
-    <div class ="sotano">
-    <img src="~/img/Tabla de Codigos.jpg" alt="Sotano">
-     
+    <div class="imagenInteractiva">
+        <img src="~/img/h4-sotano.jpg" alt="Sotano">
+        <img id="tabla_de_codigos" src="~/img/h4-tabla_de_codigos.jpg" alt="Tabla de códigos">
+    </div>
     
-    
-   
-
-    <form class = "form" action='@Url.Action("Habitacion")'>
+    <form action='@Url.Action("Habitacion")'>
         <p>
             <input type="hidden" name="sala" value="4">
             @if (ViewBag.Error != null) {
