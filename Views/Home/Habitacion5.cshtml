@@ -1,17 +1,17 @@
 @{
-    ViewData["Title"] = "Fase final: El Enigma";
+    ViewData["Title"] = "Fase final: el enigma";
 }
 
 <div class="centrado">
-    <h1>Bienvenido/a a la fase final. Mucha Suerte.</h1>
-    <p>¡Bienvenidos, intrépidos buscadores de fortuna, a la oscura y temida Guarida del Capitán Negro! Aquí, en las proFundidades olvidadas dEl océano, se esconde eL tesoro más codiciado y custodiado por el espíritu vengativo del capitán y su trIpulación perdida. La atmósfera es opresiva y el eco de sus pasos resonará en las almas de aquellos que osen desafiar la maldición que yace sobre este lugar. </p>
-    <p> Caminen con cautela entre los restos de quienes vinieron antes que ustedes, ahora devorados por la avariCia y el abismo. Las antorchas titIlantes apenas disipan las sombras que se esconden entre los huesos descarnados y las caDenas herrumbrosas que anuncian un destino similAr para los que fracasen en este último juicio. El cofre, viejo y ominoso, espera impaciente, prometiendo tesoros inimaginables, pero también el precio más alto que un alma pueDe pagar. </p>
-    <p> Solo aquellos lo suficientemente valientes para enfrentar la verdad oculta en las estrellas y reflejada en el espejo ancestral podrán escapar de la maldición eterna que acecha en la Guarida del Capitán Negro. Que sus decisiones y respuestas no solo decidan su dEstino, sino también el destino de los que vinieron anteS y no encontraron la salida. </p>
+    <h1>Fase final</h1>
+    <p>Este es el final de su aventura, ¡estáis cerca de su libertad!</p>
+    <p>Aquí, en las proFundidades olvidadas dEl océano, se esconde eL tesoro más codiciado y custodiado por el espíritu vengativo del capitán y su trIpulación perdida. La atmósfera es opresiva y el eco de sus pasos resonará en las almas de aquellos que osen desafiar la maldición que yace sobre este lugar. </p>
+    <p>Caminen con cautela entre los restos de quienes vinieron antes que ustedes, ahora devorados por la avariCia y el abismo. Las antorchas titIlantes apenas disipan las sombras que se esconden entre los huesos descarnados y las caDenas herrumbrosas que anuncian un destino similAr para los que fracasen en este último juicio. El cofre, viejo y ominoso, espera impaciente, prometiendo tesoros inimaginables, pero también el precio más alto que un alma pueDe pagar.</p>
+    <p>Solo aquellos lo suficientemente valientes para enfrentar la verdad oculta en las estrellas y reflejada en el espejo ancestral podrán escapar de la maldición eterna que acecha en la Guarida del Capitán Negro. Que sus decisiones y respuestas no solo decidan su dEstino, sino también el destino de los que vinieron anteS y no encontraron la salida.</p>
 
     <img src="~/img/Tesoro.jpg" alt="Tesoro">
 
-
-    <form class = "form" action='@Url.Action("Habitacion")'>
+    <form action='@Url.Action("Habitacion")'>
         <p>
             <input type="hidden" name="sala" value="5">
             @if (ViewBag.Error != null) {
