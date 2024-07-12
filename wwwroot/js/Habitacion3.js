@@ -63,7 +63,7 @@ function ocultarContenidoCarta(botonCarta, posCarta) {
     botonCarta.innerText = SENIUELO;
 }
 function activarSecuenciaVictoria() {
-    const imagenLoro = document.getElementById("imagenLoro");
+    const imagenLoro = document.getElementById("imagenLoroH3");
     const audioLoro = document.getElementById("audioLoro");
     const fuenteAudioLoro = audioLoro.getElementsByTagName("source")[0];
     const inputs = document.getElementsByTagName("input");
