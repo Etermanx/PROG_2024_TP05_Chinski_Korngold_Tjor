@@ -26,6 +26,10 @@ public class HomeController : Controller
     {
         return View();
     }
+    public IActionResult Victoria()
+    {
+        return View();
+    }
     public IActionResult Comenzar()
     {
         Escape.ReiniciarJuego();
