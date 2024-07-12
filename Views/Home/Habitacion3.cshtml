@@ -2,22 +2,23 @@
     ViewData["Title"] = "Cubierta";
 }
 
-<audio loop autoplay>
+<audio id="audioLoro" loop autoplay>
     <source src="~/audio/h3-loros.mp3" type="audio/mpeg" />
 </audio>
 
 <div class="centrado">
     <h1>Cubierta</h1>
-    <p>Al abrir la puerta hacia la tercera sala de la sala de escape, me encuentro transportado a la cubierta del barco pirata. El suelo de madera cruje bajo mis pies mientras navego entre barriles vacíos y redes desgastadas que cuelgan del techo. El ambiente está impregnado con el olor a sal marina y a aventura. A lo lejos, la figura de un timón antiguo y oxidado domina el centro de la cubierta, mientras que en las paredes cuelgan mapas descoloridos y dagas ornamentadas.En esta cubierta encontraras desafios y acertijos con el fin de pasar a la siguiente etapa.</p>
+    <p>Al abrir la puerta te encuentras en la cubierta del barco. El suelo de madera cruje bajo tus pies mientras navegas entre barriles vacíos y redes desgastadas que cuelgan del techo. El ambiente está impregnado con el olor a sal marina. A lo lejos, la figura de un timón antiguo y oxidado domina el centro de la cubierta, mientras que en las paredes cuelgan mapas descoloridos y dagas ornamentadas. Pero un pequeño loro regordete se asoma a la distancia y te propone un juego: deberás jugar a un memotest imposible para obtener la clave.</p>
     <p>Buena suerte!!</p>
 
-    <img id="loro" src="~/img/h3-loro.gif" alt="Loro pirata">
-
-    <div id="memotest">
-        <noscript>
-            <p>Lo siento, pero esta parte de la aventura requiere de Javascript. Por favor, habilitelo si quiere continuar.</p>
-            <p>Entendemos si de lo contrario desea abandonar el sitio.</p>
-        </noscript>
+    <div id="cubierta" class="centrado">
+        <img id="imagenLoro" src="~/img/h3-loro.gif" alt="Loro pirata">
+        <div id="memotest">
+            <noscript>
+                <p>Lo siento, pero esta parte de la aventura requiere de Javascript. Por favor, habilitelo si quiere continuar.</p>
+                <p>Entendemos si de lo contrario desea abandonar el sitio.</p>
+            </noscript>
+        </div>
     </div>
     
     <form action='@Url.Action("Habitacion")'>
@@ -35,4 +36,4 @@
     </form>
 </div>
 
-<script src="~/js/Habitacion3.js"></script>
+<script src="~/js/Habitacion3.js" asp-append-version="true"></script>
