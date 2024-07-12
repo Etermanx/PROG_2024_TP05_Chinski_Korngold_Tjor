@@ -23,6 +23,24 @@ body {
   color: #c8c8c6;
   margin: 0%;
 }
+
+a {
+  color: #c8c8c6;
+  text-decoration: none;
+  width: auto;
+}
+a:hover {
+  color: #9c9b9b;
+}
+img {
+  width: 100%;
+  border: solid 5px #361d09;
+}
+div { padding: 0 15%; }
+div div { padding: 0%; }
+p { margin: 6px 0; }
+
+
 header {
   display: flex;
   align-items: center;
@@ -34,17 +52,15 @@ header a[href="/"] {
 header a[href="/"], nav li {
   margin-right: 5px;
 }
+header img, .imagenInteractiva img {
+  border: none;
+}
 nav li {
   padding: 3px;
   border: solid 1px white;
   border-radius: 2px;
 }
 
-div { padding: 0 15%; }
-div div { padding: 0%; }
-p {
-  margin: 6px 0;
-}
 
 .imagenes-descriptivas-slogan {
   width: 70%;
@@ -59,29 +75,9 @@ p {
   margin: 1.5%;
 }
 
-.sotano {
-  align-items: stretch;
-}
-.form {
-  display: flex;
-  align-items: center;
-}
-
 h1 {
   font-family: "Beth Ellen", cursive;
 }
-a {
-  color: #c8c8c6;
-  text-decoration: none;
-  width: auto;
-}
-a:hover {
-  color: #9c9b9b;
-}
-img {
-  width: 100%;
-}
-
 
 input[type=text] {
   font-family: "Indie Flower", cursive;
@@ -123,8 +119,8 @@ ul {
   width: 100%;
   height: 100%;
 }
-.imagenInteractiva:first {
-  background: transparent;
+.imagenInteractiva img:first-child {
+  border: solid 5px #361d09;
 }
 #pergamino {
   position: absolute;
