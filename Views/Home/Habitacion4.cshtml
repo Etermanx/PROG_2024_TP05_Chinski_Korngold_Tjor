@@ -6,6 +6,7 @@
     <h1>Bienvenido/a al sótano</h1>
     <p>¡Ahoy, valientes aventureros! Han llegado al oscuro y misterioso sótano del galeón pirata. Aquí se esconde el tesoro más grande, protegido por ingeniosos acertijos y trampas. </p>
     <p>Solo los más astutos podrán escapar con el botín.</p>
+    <p> Pista: Las dos espadas cruzadas no es la letra b, fijate un icono que sea parecido </p>
 
     <div class="imagenInteractiva">
         <img src="~/img/h4-sotano.jpg" alt="Sotano">
@@ -16,10 +17,10 @@
         <p>
             <input type="hidden" name="sala" value="4">
             @if (ViewBag.Error != null) {
-                <input type="text" name="clave" placeholder="@ViewBag.Error" required>
+                <input type="text" name="clave" placeholder="@ViewBag.Error" autocomplete="off" required>
                 <input class="rebotado" type="submit" value="🔒">
             } else {
-                <input type="text" name="clave" placeholder="Clave" required>
+                <input type="text" name="clave" placeholder="Clave" autocomplete="off" required>
                 <input type="submit" value="🔒">
             }
         </p>
