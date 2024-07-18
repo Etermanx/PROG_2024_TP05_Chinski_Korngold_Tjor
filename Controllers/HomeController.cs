@@ -51,4 +51,26 @@ public class HomeController : Controller
             return View("Habitacion" + estadoJuego);
         }
     }
+
+
+    /*static void comenzarTimer(out Timer reloj, int segundos)
+    {
+        reloj = new Timer(segundos * 1000);
+
+        reloj.Elapsed += tick;
+        reloj.AutoReset = true;
+        reloj.Enabled = true;
+    }
+    static void finalizarTimer(Timer reloj)
+    {
+        reloj.Stop();
+        reloj.Dispose();
+    }
+    static void tick(Object source, ElapsedEventArgs e)
+    {
+            segundos++;
+
+        if (segundos == SEGUNDOS_MAX)
+            Console.WriteLine($"¡Ring! Ya pasaron {SEGUNDOS_MAX / 60} mins. Apretá enter para saltar al final.");
+    }*/
 }

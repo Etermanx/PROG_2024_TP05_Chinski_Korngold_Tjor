@@ -1,11 +1,3 @@
-/**
- * MEMOTEST v1.0
- * Hecho por Lucas Tjor
- * 
- * Probablemente esto núnca lo vea nadie, pero
- */
-
-
 const CARTAS_IGUALES = 2;
 const SIMBOLOS = ["⚔", "⛵", "🕳", "🦜", "🕷"];
 const SENIUELO = "☠";
@@ -16,7 +8,7 @@ var i = 0;
 var longitudCartas = SIMBOLOS.length * CARTAS_IGUALES;
 var gruposEncontrados = 0;
 var cartas = new Array(longitudCartas);
-var grupo = []; // 1 grupo = 1 grupo
+var grupo = []; // 1 grupo = 1 par
 
 
 function crearBotonesCarta(posCarta) {
@@ -104,7 +96,8 @@ function presionarBotonCarta(clickBotonCarta, posCarta) {
 
 for (let posCarta = 0; posCarta < longitudCartas; posCarta++) {
     crearCarta(posCarta);
+}
+cartas = barajarVector(cartas);
+for (let posCarta = 0; posCarta < longitudCartas; posCarta++) {
     crearBotonesCarta(posCarta);
 }
-
-cartas = barajarVector(cartas);
