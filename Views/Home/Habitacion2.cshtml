@@ -1,4 +1,6 @@
 @{
+    Layout = "~/Views/Shared/_Habitacion.cshtml";
+    ViewData["Number"] = 2;
     ViewData["Title"] = "Camarote";
 }
 
@@ -6,40 +8,24 @@
     <source src="~/audio/h2-morse.mp3" type="audio/mpeg" />
 </audio>
 
-<div class="centrado">
-    <h1>Camarote</h1>
-    <p>¡Bienvenidos a la segunda etapa de vuestra aventura de escape en alta mar! Habéis superado con éxito los desafíos de la bodega principal y ahora nos adentramos en el misterioso camarote del capitán.</p>
-    <p>¡La aventura te espera! Recuerden trabajar en equipo, observar cada detalle y estar preparados para cualquier sorpresa que pueda surgir en su camino. El destino de la tripulación depende de su habilidad para resolver los enigmas que los esperan en esta segunda sala.</p>
-    <p>¿Estan listos para desafiar sus mentes y su conocimiento de los números binarios y el órden del abecedario español?</p>
+<h1>Camarote</h1>
+<p>¡Bienvenidos a la segunda etapa de vuestra aventura de escape en alta mar! Habéis superado con éxito los desafíos de la bodega principal y ahora nos adentramos en el misterioso camarote del capitán.</p>
+<p>¡La aventura te espera! Recuerden trabajar en equipo, observar cada detalle y estar preparados para cualquier sorpresa que pueda surgir en su camino. El destino de la tripulación depende de su habilidad para resolver los enigmas que los esperan en esta segunda sala.</p>
+<p>¿Estan listos para desafiar sus mentes y su conocimiento de los números binarios y el órden del abecedario español?</p>
 
-    <div class="imagenInteractiva">
-        <img src="~/img/h2-camarote.jpg" alt="Camarote">
-        <img id="pergamino" src="~/img/h2-pergamino.png" alt="Pergamino">
-        <div id="carta">
-            <img src="~/img/h2-carta.webp" alt="Carta">
-            <div>
-                <p>Querida Capitana Morgana,</p>
-                <p>Espero que esta carta te encuentre bien en medio de tus travesías por los mares. Quisiera compartir contigo una reflexión que me ha estado rondando la mente últimamente. Como bien sabes, en nuestro mundo de piratas, la verdad y la mentira a menudo se entrelazan como las cuerdas de un barco en plena tormenta.</p>
-                <p>He aprendido a lo largo de mis años en alta mar que, si bien es cierto que a veces los piratas recurren a la mentira para proteger sus tesoros o engañar a sus enemigos, también es verdad que hay momentos en los que la verdad brilla con más fuerza que cualquier joya robada.</p>
-                <p>Recuerdo una vez en la que nos vimos envueltos en una situación complicada, donde la mentira parecía ser nuestra única tabla de salvación. Sin embargo, fue en ese preciso instante cuando recordé las sabias palabras de un viejo marinero: "Lo esencial es invisible a los ojos". Comprendí entonces que, aunque la mentira pudiera parecer la opción más fácil, la verdad era el faro que nos guiaría a puerto seguro.</p>
-                <p>Así que, querida Morgana, te escribo estas palabras no solo como una confesión de mis propias reflexiones, sino también como un recordatorio de que, incluso en un mundo de piratas y tesoros ocultos, la verdad siempre prevalecerá.</p>
-                <p>Saludos,</p>
-                <p>Gustavo, el Pirata.</p>
-            </div>
+<div class="imagenInteractiva">
+    <img src="~/img/h2-camarote.jpg" alt="Camarote">
+    <img id="pergamino" src="~/img/h2-pergamino.png" alt="Pergamino">
+    <div id="carta">
+        <img src="~/img/h2-carta.webp" alt="Carta">
+        <div>
+            <p>Querida Capitana Morgana,</p>
+            <p>Espero que esta carta te encuentre bien en medio de tus travesías por los mares. Quisiera compartir contigo una reflexión que me ha estado rondando la mente últimamente. Como bien sabes, en nuestro mundo de piratas, la verdad y la mentira a menudo se entrelazan como las cuerdas de un barco en plena tormenta.</p>
+            <p>He aprendido a lo largo de mis años en alta mar que, si bien es cierto que a veces los piratas recurren a la mentira para proteger sus tesoros o engañar a sus enemigos, también es verdad que hay momentos en los que la verdad brilla con más fuerza que cualquier joya robada.</p>
+            <p>Recuerdo una vez en la que nos vimos envueltos en una situación complicada, donde la mentira parecía ser nuestra única tabla de salvación. Sin embargo, fue en ese preciso instante cuando recordé las sabias palabras de un viejo marinero: "Lo esencial es invisible a los ojos". Comprendí entonces que, aunque la mentira pudiera parecer la opción más fácil, la verdad era el faro que nos guiaría a puerto seguro.</p>
+            <p>Así que, querida Morgana, te escribo estas palabras no solo como una confesión de mis propias reflexiones, sino también como un recordatorio de que, incluso en un mundo de piratas y tesoros ocultos, la verdad siempre prevalecerá.</p>
+            <p>Saludos,</p>
+            <p>Gustavo, el Pirata.</p>
         </div>
     </div>
-
-    <form action='@Url.Action("Habitacion")'>
-        <p>
-            <input type="hidden" name="sala" value="2">
-            @if (ViewBag.Error != null) {
-                <input type="text" name="clave" placeholder="@ViewBag.Error" autocomplete="off" required>
-                <input class="rebotado" type="submit" value="🔒">
-            } else {
-                <input type="text" name="clave" placeholder="Clave" autocomplete="off" required>
-                <input type="submit" value="🔒">
-            }
-        </p>
-        <p>No escribir tildes.</p>
-    </form>
 </div>

@@ -15,7 +15,6 @@ public class HomeController : Controller
 
     public IActionResult Index()
     {
-        Escape.ReiniciarJuego();
         return View();
     }
     public IActionResult Tutorial()
@@ -28,49 +27,33 @@ public class HomeController : Controller
     }
     public IActionResult Comenzar()
     {
-        Escape.ReiniciarJuego();
+        Escape.IniciarJuego();
         return View("Habitacion1");
     }
     public IActionResult Habitacion(int sala, string clave)
     {
+        bool derrotado = Escape.GetDerrota();
         int estadoJuego = Escape.GetEstadoJuego();
-
-        if (sala == estadoJuego && Escape.ResolverSala(sala, clave))
+        
+        if (!derrotado && sala == estadoJuego && Escape.ResolverSala(sala, clave))
         {
-            if (estadoJuego == 5)
+            estadoJuego++;
+            if (estadoJuego > Escape.GetCantidadSalas())
                 return View("Victoria");
             else
-            {
-                estadoJuego++;
                 return View("Habitacion" + estadoJuego);
-            }
         }
-        else
+        else if (!derrotado)
         {
             ViewBag.Error = "Respuesta incorrecta";
             return View("Habitacion" + estadoJuego);
         }
+        else
+            return View("Derrota");
     }
 
-
-    /*static void comenzarTimer(out Timer reloj, int segundos)
+    public IActionResult SegundosFaltantes()
     {
-        reloj = new Timer(segundos * 1000);
-
-        reloj.Elapsed += tick;
-        reloj.AutoReset = true;
-        reloj.Enabled = true;
+        return Content(Escape.GetSegundosFaltantes().ToString(), "text/plain");
     }
-    static void finalizarTimer(Timer reloj)
-    {
-        reloj.Stop();
-        reloj.Dispose();
-    }
-    static void tick(Object source, ElapsedEventArgs e)
-    {
-            segundos++;
-
-        if (segundos == SEGUNDOS_MAX)
-            Console.WriteLine($"¡Ring! Ya pasaron {SEGUNDOS_MAX / 60} mins. Apretá enter para saltar al final.");
-    }*/
 }

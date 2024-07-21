@@ -1,7 +1,12 @@
+using System.Timers;
+
 static class Escape {
-    private static string[] incognitasSalas = new string[5];
-    private static int estadoJuego = 1;
-    private static bool juegoInicializado = false;
+    const int SALAS = 5;
+    const int SEGUNDOS_MAX = 10; // 1h
+    private static string[] incognitasSalas = new string[SALAS];
+    private static int estadoJuego;
+    private static System.Timers.Timer reloj;
+    private static int segundosFaltantes = 0;
 
     private static void InicializarJuego()
     {
@@ -10,24 +15,56 @@ static class Escape {
         incognitasSalas[2] = "cofre";
         incognitasSalas[3] = "capitan";
         incognitasSalas[4] = "felicidades";
-        juegoInicializado = true;
+    }
+    public static void IniciarJuego()
+    {
+        InicializarJuego();
+        estadoJuego = 1;
+        ComenzarContador(out reloj, SEGUNDOS_MAX);
+    }
+    public static int GetCantidadSalas()
+    {
+        return SALAS;
     }
     public static int GetEstadoJuego()
     {
         return estadoJuego;
     }
-    public static void ReiniciarJuego()
+    public static bool GetDerrota()
     {
-        estadoJuego = 1;
-        juegoInicializado = false;
+        return estadoJuego <= SALAS && segundosFaltantes < 0;
+    }
+    public static int GetSegundosFaltantes()
+    {
+        return segundosFaltantes;
     }
     public static bool ResolverSala(int Sala, string Incognita)
     {
         bool resuelto;
-        InicializarJuego();
         resuelto = incognitasSalas[Sala-1] == Incognita.ToLower();
         if (resuelto)
             estadoJuego++;
         return resuelto;
+    }
+
+    private static void ComenzarContador(out System.Timers.Timer reloj, int segundosMax)
+    {
+        reloj = new System.Timers.Timer(1000); // 1 segundo
+        segundosFaltantes = segundosMax;
+
+        reloj.Elapsed += Tick;
+        reloj.AutoReset = true;
+        reloj.Enabled = true;
+    }
+    private static void FinalizarContador(System.Timers.Timer reloj)
+    {
+        reloj.Stop();
+        reloj.Dispose();
+    }
+    private static void Tick(Object source, ElapsedEventArgs e)
+    {
+        segundosFaltantes--;
+        if (segundosFaltantes < 0)
+            FinalizarContador(reloj);
     }
 }

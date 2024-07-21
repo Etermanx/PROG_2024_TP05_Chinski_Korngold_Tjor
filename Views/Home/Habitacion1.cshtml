@@ -1,26 +1,12 @@
 @{
+    Layout = "~/Views/Shared/_Habitacion.cshtml";
+    ViewData["Number"] = 1;
     ViewData["Title"] = "Bienvenido/a a bordo";
 }
 
-<div class="centrado">
-    <h1>Bienvenido/a a bordo</h1>
-    <p>Has sido capturado por la temible Capitana Morgana y su tripulación de despiadados piratas. Te han encerrado en la oscura y húmeda bodega del 'Kraken Negro', el navío insignia de estos temibles bucaneros.</p>
-    <p>Miras a tu alrededor y ves barriles, cajas y sacos apilados por todas partes. El aire huele a madera vieja, pólvora y ron. Tienes solo 60 minutos para escapar de este lúgubre calabozo antes de que los piratas decidan deshacerse de ti.</p>
-    <p>Deberás usar toda tu astucia y habilidad para resolver acertijos, descifrar mapas ocultos, encontrar tesoros escondidos y burlar las trampas que han dispuesto para ti. Sólo así podrás recuperar la libertad y escapar de las garras de estos temibles piratas. <i>(aargh)</i></p>
-    
-    <img src="~/img/h1-bodega_amanecer.jpg" alt="Bodega">
+<h1>Bienvenido/a a bordo</h1>
+<p>Has sido capturado por la temible Capitana Morgana y su tripulación de despiadados piratas. Te han encerrado en la oscura y húmeda bodega del 'Kraken Negro', el navío insignia de estos temibles bucaneros.</p>
+<p>Miras a tu alrededor y ves barriles, cajas y sacos apilados por todas partes. El aire huele a madera vieja, pólvora y ron. Tienes solo 60 minutos para escapar de este lúgubre calabozo antes de que los piratas decidan deshacerse de ti.</p>
+<p>Deberás usar toda tu astucia y habilidad para resolver acertijos, descifrar mapas ocultos, encontrar tesoros escondidos y burlar las trampas que han dispuesto para ti. Sólo así podrás recuperar la libertad y escapar de las garras de estos temibles piratas. <i>(aargh)</i></p>
 
-    <form action='@Url.Action("Habitacion")'>
-        <p>
-            <input type="hidden" name="sala" value="1">
-            @if (ViewBag.Error != null) {
-                <input type="text" name="clave" placeholder="@ViewBag.Error" autocomplete="off" required>
-                <input class="rebotado" type="submit" value="🔒">
-            } else {
-                <input type="text" name="clave" placeholder="Clave" autocomplete="off" required>
-                <input type="submit" value="🔒">
-            }
-        </p>
-        <p>No escribir tildes.</p>
-    </form>
-</div>
+<img src="~/img/h1-bodega_amanecer.jpg" alt="Bodega">

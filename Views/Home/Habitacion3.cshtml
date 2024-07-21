@@ -1,4 +1,6 @@
 @{
+    Layout = "~/Views/Shared/_Habitacion.cshtml";
+    ViewData["Number"] = 3;
     ViewData["Title"] = "Cubierta";
 }
 
@@ -6,34 +8,18 @@
     <source src="~/audio/h3-loros.mp3" type="audio/mpeg" />
 </audio>
 
-<div class="centrado">
-    <h1>Cubierta</h1>
-    <p>Al abrir la puerta te encuentras en la cubierta del barco. El suelo de madera cruje bajo tus pies mientras navegas entre barriles vacíos y redes desgastadas que cuelgan del techo. El ambiente está impregnado con el olor a sal marina. A lo lejos, la figura de un timón antiguo y oxidado domina el centro de la cubierta, mientras que en las paredes cuelgan mapas descoloridos y dagas ornamentadas. Pero un pequeño loro regordete se asoma a la distancia y te propone un juego: deberás jugar a un memotest imposible para obtener la clave.</p>
-    <p>Buena suerte!!</p>
+<h1>Cubierta</h1>
+<p>Al abrir la puerta te encuentras en la cubierta del barco. El suelo de madera cruje bajo tus pies mientras navegas entre barriles vacíos y redes desgastadas que cuelgan del techo. El ambiente está impregnado con el olor a sal marina. A lo lejos, la figura de un timón antiguo y oxidado domina el centro de la cubierta, mientras que en las paredes cuelgan mapas descoloridos y dagas ornamentadas. Pero un pequeño loro regordete se asoma a la distancia y te propone un juego: deberás jugar a un memotest imposible para obtener la clave.</p>
+<p>Buena suerte!!</p>
 
-    <div id="cubierta" class="centrado">
-        <img id="imagenLoroH3" src="~/img/loro.gif" alt="Loro pirata">
-        <div id="memotest">
-            <noscript>
-                <p>Lo siento, pero esta parte de la aventura requiere de Javascript. Por favor, habilitelo si quiere continuar.</p>
-                <p>Entendemos si de lo contrario desea abandonar el sitio.</p>
-            </noscript>
-        </div>
+<div id="cubierta" class="centrado">
+    <img id="imagenLoroH3" src="~/img/loro.gif" alt="Loro pirata">
+    <div id="memotest">
+        <noscript>
+            <p>Lo siento, pero esta parte de la aventura requiere de Javascript. Por favor, habilitelo si quiere continuar.</p>
+            <p>Entendemos si de lo contrario desea abandonar el sitio.</p>
+        </noscript>
     </div>
-    
-    <form action='@Url.Action("Habitacion")'>
-        <p>
-            <input type="hidden" name="sala" value="3">
-            @if (ViewBag.Error != null) {
-                <input type="text" name="clave" placeholder="@ViewBag.Error" autocomplete="off" required>
-                <input class="rebotado" type="submit" value="🔒">
-            } else {
-                <input type="text" name="clave" placeholder="Clave" autocomplete="off" required>
-                <input type="submit" value="🔒">
-            }
-        </p>
-        <p>No escribir tildes.</p>
-    </form>
 </div>
 
 <script src="~/js/Habitacion3.js" asp-append-version="true"></script>
