@@ -16,9 +16,10 @@ function incluirCero(numeroSinCero) {
 }
 
 function actualizarContador() {
-    let minutos = incluirCero(Math.floor(segundosFaltantes / 60));
-    let segundos = incluirCero(segundosFaltantes - minutos * 60);
-    contador.innerText = "Tenés " + minutos + ":" + segundos;
+    let horas = incluirCero(Math.floor(segundosFaltantes / 3600));
+    let minutos = incluirCero(Math.floor(segundosFaltantes / 60 - horas * 60));
+    let segundos = incluirCero(segundosFaltantes - minutos * 60 - horas * 3600);
+    contador.innerText = "Tenés " + horas + ":" + minutos + ":" + segundos;
 }
 
 intervalo = setInterval(() => {
