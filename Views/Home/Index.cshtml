@@ -2,16 +2,18 @@
     ViewData["Title"] = "Index";
 }
 
-<div class="centrado">
+<div id="index">
     <h1>Bienvenido/a a Escape Pirata</h1>
-    <div class = "imagenes-descriptivas-slogan">
-        <!-- por hacer: imgs descriptivas + slogan -->
-        <img src="~/img/Index.gif" alt="Camarote">
-    </div>
-    <p>
+    <p>Aventurate a zarpar en esta nueva sala de escape con temática pirata. Resolve acertijos, jugá juegos y ¡escapá de la Capitana Morgana! ¿Estás/an listos para emprender esta épica aventura?</p>
+    <p id="opcionesIndex">
         <a href='@Url.Action("Comenzar")'>Comenzar</a>
-        <a href='@Url.Action("Creditos")'>Creditos</a>
+        <a href='@Url.Action("Creditos")'>Créditos</a>
     </p>
+    <div>
+        <img src="~/img/index-screenshot1.jpg" alt="Screenshot 1">
+        <img src="~/img/index-screenshot2.jpg" alt="Screenshot 2">
+        <img src="~/img/Tesoro.jpg" alt="Screenshot 3">
+    </div>
 </div>
 
     

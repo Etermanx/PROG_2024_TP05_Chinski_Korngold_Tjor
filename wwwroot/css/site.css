@@ -36,8 +36,26 @@ img {
   width: 100%;
   border: solid 5px #361d09;
 }
-main { padding: 0 15%; }
+main { padding: 2% 15%; }
 p { margin: 6px 0; }
+ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  padding: 0;
+  width: 100%;
+}
+.centrado, .expandido li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.centrado ol li{
+  margin: 1.5%;
+}
+.expandido li {
+  width: 33.33%;
+}
 
 
 header {
@@ -54,61 +72,42 @@ header a[href="/"], nav li {
 header img, .imagenInteractiva img {
   border: none;
 }
-nav li {
+nav li, #index a:first-child {
   padding: 3px;
   border: solid 1px white;
   border-radius: 2px;
 }
 
 
-.imagenes-descriptivas-slogan {
-  width: 70%;
-  height: 60%;
-}
-.centrado, .expandido li {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.centrado ol li{
-  margin: 1.5%;
-}
-
 h1 {
   font-family: "Beth Ellen", cursive;
+  margin: 0%;
 }
 
-input[type=text] {
-  font-family: "Indie Flower", cursive;
-  font-size: 30px;
-  background-color: transparent;
-  color: #c8c8c6;
-  border: none;
-  outline: none;
-}
-input[type=submit] {
-  background-color: #c8c8c6;
-  border: solid 1px #9c9b9b;
-  width: 30px;
-  height: 30px;
-}
-input[type=submit].rebotado {
-  background-color: red;
-  transition: 0.3s;
-}
-input[type=submit].rebotado:hover {
-  background-color: #c8c8c6;
-}
 
-ul {
+#index {
+  background: url("/img/Index.gif");
+  background-position: center;
+  background-size: cover;
+  text-align: center;
+  padding: 1%;
+}
+#opcionesIndex {
+  margin: 3% 0;
+}
+#index a {
+  font-size: 20px;
+}
+#index a:first-child {
+  background-color: #43200a;
+}
+#index div {
   display: flex;
-  flex-direction: row;
-  list-style: none;
-  padding: 0;
-  width: 100%;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
-.expandido li {
-  width: 33.33%;
+#index div img {
+  width: 30%;
 }
 
 
@@ -117,12 +116,29 @@ form {
   margin-right: 1%;
   float: left;
 }
-input[type="text"] {
+input[type=text] {
+  font-family: "Indie Flower", cursive;
+  font-size: 30px;
+  background-color: transparent;
+  color: #c8c8c6;
   width: 80%;
+  border: none;
+  outline: none;
 }
-input[type="submit"] {
+input[type=submit] {
+  background-color: #c8c8c6;
+  border: solid 1px #9c9b9b;
   width: 10%;
+  height: 30px;
 }
+input[type=submit].rebotado {
+  background-color: #ff0000;
+  transition: 0.3s;
+}
+input[type=submit].rebotado:hover {
+  background-color: #c8c8c6;
+}
+
 #contador {
   font-size: 24px;
   width: 48.5%;
