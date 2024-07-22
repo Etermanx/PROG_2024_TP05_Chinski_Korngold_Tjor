@@ -199,10 +199,6 @@ input[type=submit].rebotado:hover {
   transition: 0.2s;
 }
 #pergamino:hover {
-  background-image: url("/img/mano.jpg");
-  background-position: bottom right;
-  background-repeat: no-repeat;
-  background-size: 50%;
   width: 50%;
   top: 15%;
   left: 10%;
