@@ -65,7 +65,7 @@ nav li {
   width: 70%;
   height: 60%;
 }
-.centrado {
+.centrado, .expandido li {
   display: flex;
   flex-direction: column;
   align-items: center;
