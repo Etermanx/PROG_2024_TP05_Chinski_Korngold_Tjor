@@ -155,6 +155,9 @@ input[type=submit].rebotado:hover {
 .imagenInteractiva img:first-child {
   border: solid 5px #361d09;
 }
+.imagenInteractiva a img:first-child {
+  border: none;
+}
 #pergamino {
   position: absolute;
   width: 8%;
