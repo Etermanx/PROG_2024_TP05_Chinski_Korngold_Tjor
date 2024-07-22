@@ -2,7 +2,7 @@ using System.Timers;
 
 static class Escape {
     const int SALAS = 5;
-    const int SEGUNDOS_MAX = 3600; // 1h
+    const int SEGUNDOS_MAX = 5400; // 1:30h
     private static string[] incognitasSalas = new string[SALAS];
     private static int estadoJuego;
     private static System.Timers.Timer reloj;
