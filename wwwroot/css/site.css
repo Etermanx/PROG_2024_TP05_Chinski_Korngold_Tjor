@@ -36,7 +36,10 @@ img {
   width: 100%;
   border: solid 5px #361d09;
 }
-main { padding: 2% 15%; }
+main {
+  padding: 2% 15%;
+  min-height: 81vh;
+}
 p { margin: 6px 0; }
 ul {
   display: flex;
@@ -90,7 +93,7 @@ h1 {
   background-position: center;
   background-size: cover;
   text-align: center;
-  padding: 1%;
+  padding: 5% 1%;
 }
 #opcionesIndex {
   margin: 3% 0;
