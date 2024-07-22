@@ -1,0 +1,32 @@
+const SEGUNDOS_FALTANTES_URL = "/Home/SegundosFaltantes";
+const HABITACION_URL = "/Home/Habitacion";
+const contador = document.getElementById("contador");
+let intervalo;
+var segundosFaltantes;
+
+fetch(SEGUNDOS_FALTANTES_URL)
+    .then((res) => res.text())
+    .then((text) => segundosFaltantes = Number(text));
+
+function incluirCero(numeroSinCero) {
+    var numeroConCero = numeroSinCero.toString();
+    if (numeroConCero.length == 1)
+        numeroConCero = "0" + numeroSinCero;
+    return numeroConCero;
+}
+
+function actualizarContador() {
+    let minutos = incluirCero(Math.floor(segundosFaltantes / 60));
+    let segundos = incluirCero(segundosFaltantes - minutos * 60);
+    contador.innerText = "Tenés " + minutos + ":" + segundos;
+}
+
+intervalo = setInterval(() => {
+    segundosFaltantes--;
+    actualizarContador();
+
+    if (segundosFaltantes == 0) {
+        clearInterval(intervalo);
+        location.href = HABITACION_URL;
+    }
+}, 1000);

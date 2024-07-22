@@ -4,20 +4,23 @@
 
 <div class="centrado">
     @RenderBody()
-
-    <form action='@Url.Action("Habitacion")'>
-        <p>
-            <input type="hidden" name="sala" value="@ViewData["Number"]">
-            @if (ViewBag.Error != null) {
-                <input type="text" name="clave" placeholder="@ViewBag.Error" autocomplete="off" required>
-                <input class="rebotado" type="submit" value="🔒">
-            } else {
-                <input type="text" name="clave" placeholder="Clave" autocomplete="off" required>
-                <input type="submit" value="🔒">
-            }
-        </p>
-        <p>No escribir tildes.</p>
-    </form>
 </div>
 
-<script src="~/js/clock.js" asp-append-version="true"></script>
+<form action='@Url.Action("Habitacion")' class="centrado">
+    <p>
+        <input type="hidden" name="sala" value="@ViewData["Number"]">
+        @if (ViewBag.Error != null)
+        {
+            <input type="text" name="clave" placeholder="@ViewBag.Error" autocomplete="off" required>
+            <input class="rebotado" type="submit" value="🔒">
+        } else {
+            <input type="text" name="clave" placeholder="Clave" autocomplete="off" required>
+            <input type="submit" value="🔒">
+        }
+    </p>
+    <p>No escribir tildes.</p>
+</form>
+
+<p id="contador" class="centrado"></p>
+
+<script src="~/js/Contador.js" asp-append-version="true"></script>
