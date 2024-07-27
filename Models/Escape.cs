@@ -4,7 +4,7 @@ static class Escape {
     const int SALAS = 5;
     const int SEGUNDOS_MAX = 5400; // 1:30h
     private static string[] incognitasSalas = new string[SALAS];
-    private static int estadoJuego;
+    private static int? estadoJuego;
     private static int intentosFallidos;
     private static System.Timers.Timer reloj;
     private static int segundosFaltantes = 0;
@@ -28,7 +28,7 @@ static class Escape {
     {
         return SALAS;
     }
-    public static int GetEstadoJuego()
+    public static int? GetEstadoJuego()
     {
         return estadoJuego;
     }
@@ -36,9 +36,9 @@ static class Escape {
     {
         return intentosFallidos;
     }
-    public static bool GetDerrota()
+    public static bool GetNoDerrota()
     {
-        return estadoJuego <= SALAS && segundosFaltantes <= 0;
+        return estadoJuego <= SALAS && segundosFaltantes > 0;
     }
     public static int GetSegundosFaltantes()
     {

@@ -32,26 +32,32 @@ public class HomeController : Controller
     }
     public IActionResult Habitacion(int sala, string clave)
     {
-        bool derrotado = Escape.GetDerrota();
-        int estadoJuego = Escape.GetEstadoJuego();
-        
-        if (!derrotado && sala == estadoJuego && Escape.ResolverSala(sala, clave))
+        bool noDerrotado = Escape.GetNoDerrota();
+        bool salaResuelta = false;
+        int? estadoJuego = Escape.GetEstadoJuego();
+        int cantidadSalas = Escape.GetCantidadSalas();
+
+        if (noDerrotado && sala == estadoJuego && Escape.ResolverSala(sala, clave))
         {
             estadoJuego++;
-            if (estadoJuego > Escape.GetCantidadSalas()) {
-                ViewBag.IntentosFallidos = Escape.GetIntentosFallidos();
-                return View("Victoria");
-            }
-            else
-                return View("Habitacion" + estadoJuego);
+            salaResuelta = true;
         }
-        else if (!derrotado)
+        
+        if (noDerrotado && estadoJuego <= cantidadSalas)
         {
-            ViewBag.Error = "Respuesta incorrecta";
+            if (!salaResuelta)
+                ViewBag.Error = "Respuesta incorrecta";
             return View("Habitacion" + estadoJuego);
         }
-        else
+        else if (noDerrotado)
+        {
+            ViewBag.IntentosFallidos = Escape.GetIntentosFallidos();
+            return View("Victoria");
+        }
+        else if (estadoJuego != null)
             return View("Derrota");
+        else
+            return RedirectToAction("Comenzar");
     }
 
     public IActionResult SegundosFaltantes()
