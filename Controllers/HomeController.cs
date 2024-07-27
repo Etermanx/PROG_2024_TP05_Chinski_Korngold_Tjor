@@ -37,6 +37,9 @@ public class HomeController : Controller
         int? estadoJuego = Escape.GetEstadoJuego();
         int cantidadSalas = Escape.GetCantidadSalas();
 
+        if (estadoJuego == null)
+            return View("Derrota");
+
         if (noDerrotado && sala == estadoJuego && Escape.ResolverSala(sala, clave))
         {
             estadoJuego++;
@@ -54,8 +57,6 @@ public class HomeController : Controller
             ViewBag.IntentosFallidos = Escape.GetIntentosFallidos();
             return View("Victoria");
         }
-        else if (estadoJuego != null)
-            return View("Derrota");
         else
             return RedirectToAction("Comenzar");
     }
