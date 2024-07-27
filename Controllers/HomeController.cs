@@ -38,8 +38,10 @@ public class HomeController : Controller
         if (!derrotado && sala == estadoJuego && Escape.ResolverSala(sala, clave))
         {
             estadoJuego++;
-            if (estadoJuego > Escape.GetCantidadSalas())
+            if (estadoJuego > Escape.GetCantidadSalas()) {
+                ViewBag.IntentosFallidos = Escape.GetIntentosFallidos();
                 return View("Victoria");
+            }
             else
                 return View("Habitacion" + estadoJuego);
         }
