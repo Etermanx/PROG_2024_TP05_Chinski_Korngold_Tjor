@@ -158,6 +158,7 @@ input[type=submit].rebotado:hover {
 .imagenInteractiva img:first-child {
   border: solid 5px #361d09;
 }
+.imagenInteractiva div img:first-child,
 .imagenInteractiva a img:first-child {
   border: none;
 }
@@ -239,10 +240,12 @@ input[type=submit].rebotado:hover {
   background-position: center;
   background-size: cover;
   width: 100%;
+  border: solid 5px #361d09;
 }
 #imagenLoroH3 {
   width: 25%;
   height: auto;
+  border: none;
 }
 #memotest {
   width: 100%;
