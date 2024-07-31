@@ -88,7 +88,7 @@ header a[href="/"], nav li {
 header img, .imagenInteractiva img {
   border: none;
 }
-nav li, #index a:first-child {
+nav li, .button {
   padding: 3px;
   border: solid 1px white;
   border-radius: 2px;

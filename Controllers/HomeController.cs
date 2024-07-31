@@ -58,7 +58,11 @@ public class HomeController : Controller
             return View("Victoria");
         }
         else
+        {
+            if (!salaResuelta)
+                ViewBag.Error = "Respuesta incorrecta";
             return View("Derrota");
+        }
     }
 
     public IActionResult SegundosFaltantes()
