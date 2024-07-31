@@ -38,7 +38,7 @@ img {
 }
 main {
   padding: 2% 15%;
-  min-height: 80.5vh;
+  min-height: 79vh;
   clear: both;
 }
 p {
@@ -80,7 +80,7 @@ header * {
 }
 header a[href="/"] {
   width: 60px;
-  height: auto;
+  height: 60px;
 }
 header a[href="/"], nav li {
   margin-right: 5px;
