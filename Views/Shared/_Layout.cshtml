@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <header>
+    <header class="clearfix">
         <a href='@Url.Action("")'><img src="~/img/logo.jpeg"></a>
         <nav>
             <ul>
@@ -17,6 +17,9 @@
                 <li><a href='@Url.Action("Creditos")'>Créditos</a></li>
             </ul>
         </nav>
+        <p id="contador">
+            <noscript>Para ver el contador, necesitás Javascript.</noscript>
+        </p>
     </header>
 
     <main role="main">
@@ -27,6 +30,7 @@
         <p>&copy;@DateTime.Now.Year David Chinski, Tomás Korngold y Lucas Tjor</p>
     </footer>
 
+    <script src="~/js/Contador.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 

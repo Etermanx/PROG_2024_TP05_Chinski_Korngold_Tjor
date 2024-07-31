@@ -38,7 +38,8 @@ img {
 }
 main {
   padding: 2% 15%;
-  min-height: 81vh;
+  min-height: 80.5vh;
+  clear: both;
 }
 p { margin: 6px 0; }
 ul {
@@ -61,13 +62,25 @@ ul {
 }
 
 
-header {
+/*header {
   display: flex;
+  flex-direction: row;
   align-items: center;
+}*/
+header, footer {
+  padding: 5px 1%;
+}
+header {
+  background: #43200a;
+  position: sticky;
+  top: 0;
 }
 header a[href="/"] {
   width: 5%;
   height: auto;
+}
+header a[href="/"], nav {
+  float: left;
 }
 header a[href="/"], nav li {
   margin-right: 5px;
@@ -79,6 +92,10 @@ nav li, #index a:first-child {
   padding: 3px;
   border: solid 1px white;
   border-radius: 2px;
+}
+#contador {
+  font-size: 24px;
+  float: right;
 }
 
 
@@ -114,11 +131,6 @@ h1 {
 }
 
 
-form {
-  width: 48.5%;
-  margin-right: 1%;
-  float: left;
-}
 input[type=text] {
   font-family: "Indie Flower", cursive;
   font-size: 30px;
@@ -140,12 +152,6 @@ input[type=submit].rebotado {
 }
 input[type=submit].rebotado:hover {
   background-color: #c8c8c6;
-}
-
-#contador {
-  font-size: 24px;
-  width: 48.5%;
-  float: left;
 }
 
 
@@ -281,7 +287,6 @@ input[type=submit].rebotado:hover {
 
 footer {
   background-color: #361d09;
-  padding: 5px;
   clear: both;
 }
 footer p {
