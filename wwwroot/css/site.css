@@ -82,16 +82,14 @@ header a[href="/"] {
   width: 60px;
   height: 60px;
 }
-header a[href="/"], nav li {
-  margin-right: 5px;
-}
 header img, .imagenInteractiva img {
   border: none;
 }
-nav li, .button {
+.button {
   padding: 3px;
   border: solid 1px white;
   border-radius: 2px;
+  background-color: #43200a;
 }
 #contador {
   font-size: 24px;
@@ -118,9 +116,6 @@ h1 {
 }
 #index a {
   font-size: 20px;
-}
-#index a:first-child {
-  background-color: #43200a;
 }
 #index div {
   display: flex;
