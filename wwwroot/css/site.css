@@ -41,12 +41,13 @@ main {
   min-height: 80.5vh;
   clear: both;
 }
-p { margin: 6px 0; }
+p {
+  margin: 6px 0;
+}
 ul {
   display: flex;
   flex-direction: row;
   list-style: none;
-  padding: 0;
   width: 100%;
 }
 .centrado, .expandido li {
@@ -62,25 +63,24 @@ ul {
 }
 
 
-/*header {
+header, footer {
+  padding: 3px 1%;
+}
+header {
   display: flex;
   flex-direction: row;
   align-items: center;
-}*/
-header, footer {
-  padding: 5px 1%;
-}
-header {
-  background: #43200a;
   position: sticky;
+  background: #43200a;
   top: 0;
 }
-header a[href="/"] {
-  width: 5%;
-  height: auto;
+header * {
+  padding: 0;
+  margin: 0;
 }
-header a[href="/"], nav {
-  float: left;
+header a[href="/"] {
+  width: 60px;
+  height: auto;
 }
 header a[href="/"], nav li {
   margin-right: 5px;
@@ -95,7 +95,8 @@ nav li, #index a:first-child {
 }
 #contador {
   font-size: 24px;
-  float: right;
+  position: absolute;
+  right: 1%;
 }
 
 

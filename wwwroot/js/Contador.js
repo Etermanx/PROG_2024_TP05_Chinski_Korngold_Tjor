@@ -24,10 +24,14 @@ function actualizarContador() {
 
 intervalo = setInterval(() => {
     segundosFaltantes--;
-    actualizarContador();
-
-    if (segundosFaltantes == 0) {
+    
+    if (segundosFaltantes < 0) {
+        clearInterval(intervalo);
+        segundosFaltantes = 0;
+    } else if (segundosFaltantes == 0) {
         clearInterval(intervalo);
         location.href = HABITACION_URL;
     }
+
+    actualizarContador();
 }, 1000);
