@@ -15,6 +15,9 @@ public class HomeController : Controller
 
     public IActionResult Index()
     {
+        ViewBag.NoDerrotado = Escape.GetNoDerrota();
+        ViewBag.EstadoJuego = Escape.GetEstadoJuego();
+        ViewBag.CantidadSalas = Escape.GetCantidadSalas();
         return View();
     }
     public IActionResult Tutorial()

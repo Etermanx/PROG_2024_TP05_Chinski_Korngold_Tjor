@@ -6,8 +6,17 @@
     <h1>Bienvenido/a a Escape Pirata</h1>
     <p>Aventurate a zarpar en esta nueva sala de escape con temática pirata. Resolve acertijos, jugá juegos y ¡escapá de la Capitana Morgana! ¿Estás/an listos para emprender esta épica aventura?</p>
     <p id="opcionesIndex">
-        <a class="button" href='@Url.Action("Comenzar")'>Comenzar</a>
-        <a href='@Url.Action("Tutorial")'>Tutorial</a>
+        @if (ViewBag.EstadoJuego == null || ViewBag.EstadoJuego > ViewBag.CantidadSalas || !ViewBag.NoDerrotado)
+        {
+            <a class="button" href="@Url.Action("Comenzar")">Comenzar</a>
+        }
+        else
+        {
+            <a class="button" href="@Url.Action("Habitacion")">Volver</a>
+            <a href="@Url.Action("Comenzar")">Reiniciar</a>
+        }
+        <a href="@Url.Action("Tutorial")">Tutorial</a>
+        <a href="@Url.Action("Creditos")">Créditos</a>
     </p>
     <div>
         <img src="~/img/index-screenshot1.jpg" alt="Screenshot 1">
