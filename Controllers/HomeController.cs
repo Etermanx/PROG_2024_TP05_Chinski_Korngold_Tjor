@@ -38,7 +38,7 @@ public class HomeController : Controller
         int cantidadSalas = Escape.GetCantidadSalas();
 
         if (estadoJuego == null)
-            return View("Derrota");
+            return RedirectToAction("Comenzar");
 
         if (noDerrotado && sala == estadoJuego && Escape.ResolverSala(sala, clave))
         {
@@ -58,7 +58,7 @@ public class HomeController : Controller
             return View("Victoria");
         }
         else
-            return RedirectToAction("Comenzar");
+            return View("Derrota");
     }
 
     public IActionResult SegundosFaltantes()
