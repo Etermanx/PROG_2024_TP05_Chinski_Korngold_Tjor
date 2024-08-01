@@ -291,11 +291,3 @@ footer {
 footer p {
   margin: 6px 0;
 }
-
-
-@media only screen and (max-width: 600px) {
-  form, #contador {
-    margin-left: 0%;
-    width: 100%;
-  }  
-}
