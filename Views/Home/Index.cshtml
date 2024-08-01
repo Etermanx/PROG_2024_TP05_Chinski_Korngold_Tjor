@@ -8,15 +8,15 @@
     <p id="opcionesIndex">
         @if (ViewBag.EstadoJuego == null || ViewBag.EstadoJuego > ViewBag.CantidadSalas || !ViewBag.NoDerrotado)
         {
-            <a class="button" href="@Url.Action("Comenzar")">Comenzar</a>
+            <a class="boton principal" href="@Url.Action("Comenzar")">Comenzar</a>
         }
         else
         {
-            <a class="button" href="@Url.Action("Habitacion")">Volver</a>
-            <a href="@Url.Action("Comenzar")">Reiniciar</a>
+            <a class="boton principal" href="@Url.Action("Habitacion")">Volver</a>
+            <a class="boton" href="@Url.Action("Comenzar")">Reiniciar</a>
         }
-        <a href="@Url.Action("Tutorial")">Tutorial</a>
-        <a href="@Url.Action("Creditos")">Créditos</a>
+        <a class="boton" href="@Url.Action("Tutorial")">Tutorial</a>
+        <a class="boton" href="@Url.Action("Creditos")">Créditos</a>
     </p>
     <div>
         <img src="~/img/index-screenshot1.jpg" alt="Screenshot 1">

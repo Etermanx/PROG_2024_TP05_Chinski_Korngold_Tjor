@@ -85,11 +85,14 @@ header a[href="/"] {
 header img, .imagenInteractiva img {
   border: none;
 }
-.button {
-  padding: 3px;
-  border: solid 1px white;
-  border-radius: 2px;
+.boton {
   background-color: #43200a;
+  border: solid 1px #ffffff;
+  border-radius: 2px;
+  padding: 3px;
+}
+.boton.principal {
+  background-color: #6d3b1b;
 }
 #contador {
   font-size: 24px;
