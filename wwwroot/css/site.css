@@ -61,6 +61,15 @@ ul {
 .expandido li {
   width: 33.33%;
 }
+.boton, nav li {
+  background-color: #43200a;
+  border: solid 1px #ffffff;
+  border-radius: 2px;
+  padding: 3px;
+}
+.boton.principal {
+  background-color: #6d3b1b;
+}
 
 
 header, footer {
@@ -82,17 +91,14 @@ header a[href="/"] {
   width: 60px;
   height: 60px;
 }
+header a[href="/"], nav li {
+  margin-right: 5px;
+}
 header img, .imagenInteractiva img {
   border: none;
 }
-.boton {
-  background-color: #43200a;
-  border: solid 1px #ffffff;
-  border-radius: 2px;
-  padding: 3px;
-}
-.boton.principal {
-  background-color: #6d3b1b;
+nav li {
+  list-style: none;
 }
 #contador {
   font-size: 24px;

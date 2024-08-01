@@ -10,7 +10,12 @@
 
 <body>
     <header>
-        <a href='@Url.Action("")'><img src="~/img/logo.jpeg"></a>
+        <a href='@Url.Action("")'>
+            <img src="~/img/logo.jpeg">
+        </a>
+        <nav>
+            <li><a href="@Url.Action("Tutorial")">Tutorial</a></li>
+        </nav>
         <p id="contador">
             <noscript>Para ver el contador, necesitás Javascript.</noscript>
         </p>
